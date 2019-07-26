@@ -167,6 +167,11 @@ public class FileUtil {
 	public static boolean setFileContent(File file, String content) {
 		boolean flag = false;
 		DataOutputStream dos = null;
+
+		if(!file.getParentFile().exists()){
+			file.getParentFile().mkdirs();
+		}
+
 		try {
 			if (content != null && content.length() >= 0) {
 				byte abyte[] = content.getBytes();
