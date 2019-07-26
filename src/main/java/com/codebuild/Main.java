@@ -15,23 +15,23 @@ import com.codebuild.build.BuildMybatis;
 import com.codebuild.build.BuildService;
 import com.codebuild.build.BuildServiceImpl;
 import com.codebuild.build.IBuilderService;
-import com.pm.domain.business.Insurance;
+import com.pm.domain.system.UserManageDept;
 
 public class Main {
 	
 	public static void main(String[] args){
-		
-		Insurance s = new Insurance();
+
+		UserManageDept s = new UserManageDept();
 		
 		String folder = "C:\\GeneraterCode";
 		Class clz = s.getClass();
-		String table = "tb_Insurance";
-		String alias = "ti";
+		String table = "ts_user_manage_dept";
+		String alias = "umd";
 		String idName = "id";
-		String menuId = "90";
-		String module = "insurance";
-		String fnName = "员工保险";
-		String excelTemplet = "员工保险";
+		String menuId = "19";
+		String module = "projectcosts";
+		String fnName = " 用户管理的部门记录";
+		String excelTemplet = " 用户管理的部门记录";
 		
 		IBuilderService action = new BuildAction(clz,idName,menuId,module,excelTemplet,folder);
 		

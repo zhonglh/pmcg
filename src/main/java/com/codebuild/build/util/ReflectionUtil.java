@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * 反射工具类. 提供访问私有变量,获取泛型类型Class, 提取集合中元素的属性, 转换字符串到对象等Util函数.
@@ -321,10 +321,8 @@ public class ReflectionUtil {
 	/**
 	 * 返回类 中方法句柄
 	 * 
-	 * @param classname
-	 *            类全名称
-	 * @param methodname
-	 *            方法名
+	 * @param classmethod
+	 *            类+f方法 全名称
 	 */
 	public static Method getMethod(String classmethod) throws Exception {
 		return getMethod(getMethodClassName(classmethod));
